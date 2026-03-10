@@ -87,20 +87,6 @@ To shut it down:
 docker-compose down
 ```
 
---
-
-## 🧩 API Endpoints
-
-> Update this section with your actual endpoints and request/response samples.
-
-- `POST /api/users/register` – Register a new user
-- `POST /api/users/login` – Log in and receive a JWT
-- `POST /api/urls` – Create a new shortened URL (authenticated)
-- `GET /{shortCode}` – Redirect to original URL
-- `GET /api/urls/{id}` – Get URL details (authenticated)
-
----
-
 ## 🧭 Deployment Notes
 
 - Verify `WebsiteConfiguration:Url` is set correctly for your deployed domain.
