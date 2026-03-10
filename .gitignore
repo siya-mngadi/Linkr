@@ -316,6 +316,12 @@ paket-files/
 __pycache__/
 *.pyc
 
+# Local secrets and env files
+.env
+*.env
+secrets*.yaml
+*.secrets.json
+
 # Cake - Uncomment if you are using it
 # tools/**
 # !tools/packages.config

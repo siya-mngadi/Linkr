@@ -1,6 +1,6 @@
-# Shorty
+# Linkr
 
-Shorty is a lightweight URL shortening service implemented as an ASP.NET Core Web API with a PostgreSQL backend. It supports user authentication, click tracking, and provides a simple REST API for creating and resolving short URLs.
+Linkr is a lightweight URL shortening service implemented as an ASP.NET Core Web API with a PostgreSQL backend. It supports user authentication, click tracking, and provides a simple REST API for creating and resolving short URLs.
 
 ---
 
@@ -18,9 +18,9 @@ Shorty is a lightweight URL shortening service implemented as an ASP.NET Core We
 
 This solution is structured as a multi-project .NET solution:
 
-- `Shorty.Api` – ASP.NET Core Web API project (hosts controllers, middleware, and DI setup)
-- `Shorty.Domain` – Core domain models, business logic, and DTOs
-- `Shorty.Infrastructure` – Database access, repositories, and persistence
+- `Linkr.Api` – ASP.NET Core Web API project (hosts controllers, middleware, and DI setup)
+- `Linkr.Domain` – Core domain models, business logic, and DTOs
+- `Linkr.Infrastructure` – Database access, repositories, and persistence
 
 ---
 
@@ -53,20 +53,20 @@ Configuration is managed via `appsettings.json` + environment variables. The fol
 1. Restore dependencies:
 
 ```bash
-cd Shorty.Api
+cd Linkr.Api
 dotnet restore
 ```
 
 2. Apply EF Core migrations (if needed):
 
 ```bash
-dotnet ef database update --project ../Shorty.Infrastructure/Shorty.Infrastructure.csproj --startup-project Shorty.Api
+dotnet ef database update --project ../Linkr.Infrastructure/Linkr.Infrastructure.csproj --startup-project Linkr.Api
 ```
 
 3. Run the API:
 
 ```bash
-dotnet run --project Shorty.Api
+dotnet run --project Linkr.Api
 ```
 
 The API will start on the configured port (default: `https://localhost:5001`).
