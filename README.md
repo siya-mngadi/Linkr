@@ -87,13 +87,7 @@ To shut it down:
 docker-compose down
 ```
 
----
-
-## 🧪 Running Tests
-
-> (If there are tests in this repo add instructions here; otherwise remove this section.)
-
----
+--
 
 ## 🧩 API Endpoints
 
