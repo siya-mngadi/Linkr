@@ -1,0 +1,34 @@
+networks:
+  linkr-api:
+    driver: bridge
+
+services:
+  linkr.api:
+    image: ${DOCKER_REGISTRY-}linkrapi
+    depends_on:
+      - "linkr.database"
+    build:
+      context: .
+      dockerfile: Linkr.Api/Dockerfile
+    ports:
+      - "7410:7410"
+    networks:
+      - linkr-api
+
+  linkr.database:
+    image: postgres:18
+    container_name: linkr.database
+    environment:
+      - POSTGRES_DB=shorten
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-changeme}
+    restart: always
+    volumes:
+      - linkr-db:/var/lib/postgresql/18/main
+    ports:
+      - 5433:5432
+    networks:
+      - linkr-api
+
+volumes:
+  linkr-db:

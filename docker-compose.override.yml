@@ -1,0 +1,7 @@
+services:
+  linkr.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=7410
+    ports:
+      - "7410"
